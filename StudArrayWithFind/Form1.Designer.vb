@@ -28,7 +28,6 @@ Partial Class Form1
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtLastName = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtDOB = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtGender = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -36,14 +35,15 @@ Partial Class Form1
         Me.btnAddStud = New System.Windows.Forms.Button()
         Me.lstStud = New System.Windows.Forms.ListBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.txtPhone = New System.Windows.Forms.MaskedTextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.chkPaid = New System.Windows.Forms.CheckBox()
+        Me.txtDOB = New System.Windows.Forms.DateTimePicker()
+        Me.txtPhone = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'txtFirstName
         '
-        Me.txtFirstName.Location = New System.Drawing.Point(48, 102)
+        Me.txtFirstName.Location = New System.Drawing.Point(52, 100)
         Me.txtFirstName.Margin = New System.Windows.Forms.Padding(4)
         Me.txtFirstName.Name = "txtFirstName"
         Me.txtFirstName.Size = New System.Drawing.Size(132, 22)
@@ -81,7 +81,7 @@ Partial Class Form1
         '
         'txtLastName
         '
-        Me.txtLastName.Location = New System.Drawing.Point(189, 102)
+        Me.txtLastName.Location = New System.Drawing.Point(192, 100)
         Me.txtLastName.Margin = New System.Windows.Forms.Padding(4)
         Me.txtLastName.Name = "txtLastName"
         Me.txtLastName.Size = New System.Drawing.Size(132, 22)
@@ -90,34 +90,26 @@ Partial Class Form1
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(331, 79)
+        Me.Label4.Location = New System.Drawing.Point(328, 64)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(87, 17)
+        Me.Label4.Size = New System.Drawing.Size(94, 34)
         Me.Label4.TabIndex = 6
-        Me.Label4.Text = "Date of Birth"
-        '
-        'txtDOB
-        '
-        Me.txtDOB.Location = New System.Drawing.Point(331, 102)
-        Me.txtDOB.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtDOB.Name = "txtDOB"
-        Me.txtDOB.Size = New System.Drawing.Size(132, 22)
-        Me.txtDOB.TabIndex = 2
+        Me.Label4.Text = "Date Of Birth " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(dd/mm/yyy)"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(472, 79)
+        Me.Label5.Location = New System.Drawing.Point(525, 81)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(56, 17)
+        Me.Label5.Size = New System.Drawing.Size(106, 17)
         Me.Label5.TabIndex = 8
-        Me.Label5.Text = "Gender"
+        Me.Label5.Text = "Gender (m or f)"
         '
         'txtGender
         '
-        Me.txtGender.Location = New System.Drawing.Point(472, 102)
+        Me.txtGender.Location = New System.Drawing.Point(535, 100)
         Me.txtGender.Margin = New System.Windows.Forms.Padding(4)
         Me.txtGender.Name = "txtGender"
         Me.txtGender.Size = New System.Drawing.Size(132, 22)
@@ -126,16 +118,16 @@ Partial Class Form1
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(613, 79)
+        Me.Label6.Location = New System.Drawing.Point(673, 81)
         Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(83, 17)
+        Me.Label6.Size = New System.Drawing.Size(134, 17)
         Me.Label6.TabIndex = 10
-        Me.Label6.Text = "Average Mk"
+        Me.Label6.Text = "Average Mk (0-100)"
         '
         'txtAvMk
         '
-        Me.txtAvMk.Location = New System.Drawing.Point(613, 102)
+        Me.txtAvMk.Location = New System.Drawing.Point(675, 100)
         Me.txtAvMk.Margin = New System.Windows.Forms.Padding(4)
         Me.txtAvMk.Name = "txtAvMk"
         Me.txtAvMk.Size = New System.Drawing.Size(132, 22)
@@ -171,14 +163,6 @@ Partial Class Form1
         Me.Label8.TabIndex = 16
         Me.Label8.Text = "List of entered students (for testing)"
         '
-        'txtPhone
-        '
-        Me.txtPhone.Location = New System.Drawing.Point(48, 160)
-        Me.txtPhone.Mask = "0000-000-000"
-        Me.txtPhone.Name = "txtPhone"
-        Me.txtPhone.Size = New System.Drawing.Size(132, 22)
-        Me.txtPhone.TabIndex = 5
-        '
         'Label7
         '
         Me.Label7.AutoSize = True
@@ -199,14 +183,30 @@ Partial Class Form1
         Me.chkPaid.Text = "Paid?"
         Me.chkPaid.UseVisualStyleBackColor = True
         '
+        'txtDOB
+        '
+        Me.txtDOB.Location = New System.Drawing.Point(328, 100)
+        Me.txtDOB.Name = "txtDOB"
+        Me.txtDOB.Size = New System.Drawing.Size(200, 22)
+        Me.txtDOB.TabIndex = 2
+        '
+        'txtPhone
+        '
+        Me.txtPhone.Location = New System.Drawing.Point(48, 160)
+        Me.txtPhone.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtPhone.Name = "txtPhone"
+        Me.txtPhone.Size = New System.Drawing.Size(132, 22)
+        Me.txtPhone.TabIndex = 5
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(815, 481)
+        Me.Controls.Add(Me.txtPhone)
+        Me.Controls.Add(Me.txtDOB)
         Me.Controls.Add(Me.chkPaid)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.txtPhone)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.lstStud)
         Me.Controls.Add(Me.btnAddStud)
@@ -215,7 +215,6 @@ Partial Class Form1
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.txtGender)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.txtDOB)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txtLastName)
         Me.Controls.Add(Me.Label2)
@@ -235,7 +234,6 @@ Partial Class Form1
     Friend WithEvents Label3 As Label
     Friend WithEvents txtLastName As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents txtDOB As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents txtGender As TextBox
     Friend WithEvents Label6 As Label
@@ -245,7 +243,8 @@ Partial Class Form1
 
     Friend WithEvents lstStud As ListBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents txtPhone As MaskedTextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents chkPaid As CheckBox
+    Friend WithEvents txtDOB As DateTimePicker
+    Friend WithEvents txtPhone As TextBox
 End Class
