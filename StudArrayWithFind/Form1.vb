@@ -94,7 +94,7 @@
             Exit Sub
         End If
 
-        If Not IsNumeric(txtAvMk.Text) Or (txtAvMk.Text) > 100 Or (txtAvMk.Text) < 0 Then
+        If Not IsNumeric(txtAvMk.Text) Then
             MsgBox("Please enter an 'average mark' (between 0-100).", MsgBoxStyle.Exclamation, "Go to the Average Mark field and input a mark, please!")
             txtAvMk.Focus()
             Exit Sub
@@ -211,13 +211,16 @@
         Dim foundName = False
         Dim searchCount As Integer = 0
         While searchCount < studentCount And foundName = False
-            searchCount = searchCount
             If students(searchCount).lastname = txtLastName.Text Then
                 foundName = True
+            Else
+                searchCount = searchCount + 1
             End If
         End While
         If foundName Then
-            lstStud.Items.Add("Your student is " & students(searchCount).firstname & " - " & students(searchCount).lastname & " - " & students(searchCount).DOB & " - " & students(searchCount).gender & " - " & students(searchCount).avMk & ".")
+            lstStud.Items.Add("Your student is " & students(searchCount).firstname &
+                              " - " & students(searchCount).lastname & " - " & students(searchCount).DOB &
+                              " - " & students(searchCount).gender & " - " & students(searchCount).avMk & ".")
         Else
             lstStud.Items.Add("This student cannot be found! ")
         End If
