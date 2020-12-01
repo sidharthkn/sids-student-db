@@ -1,5 +1,5 @@
 ﻿Public Class Form1
-    'set up a record or "class" for a student
+    'set up a record or "class" for a student.
     Class STUDENT
         Public firstname As String
         Public lastname As String
