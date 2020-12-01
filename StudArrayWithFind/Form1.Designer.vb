@@ -39,6 +39,7 @@ Partial Class Form1
         Me.chkPaid = New System.Windows.Forms.CheckBox()
         Me.txtDOB = New System.Windows.Forms.DateTimePicker()
         Me.txtPhone = New System.Windows.Forms.TextBox()
+        Me.btnFindStud = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'txtFirstName
@@ -135,7 +136,7 @@ Partial Class Form1
         '
         'btnAddStud
         '
-        Me.btnAddStud.Location = New System.Drawing.Point(465, 160)
+        Me.btnAddStud.Location = New System.Drawing.Point(528, 140)
         Me.btnAddStud.Margin = New System.Windows.Forms.Padding(4)
         Me.btnAddStud.Name = "btnAddStud"
         Me.btnAddStud.Size = New System.Drawing.Size(139, 28)
@@ -198,11 +199,22 @@ Partial Class Form1
         Me.txtPhone.Size = New System.Drawing.Size(132, 22)
         Me.txtPhone.TabIndex = 5
         '
+        'btnFindStud
+        '
+        Me.btnFindStud.Location = New System.Drawing.Point(528, 176)
+        Me.btnFindStud.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnFindStud.Name = "btnFindStud"
+        Me.btnFindStud.Size = New System.Drawing.Size(139, 28)
+        Me.btnFindStud.TabIndex = 8
+        Me.btnFindStud.Text = "Find Student"
+        Me.btnFindStud.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(815, 481)
+        Me.Controls.Add(Me.btnFindStud)
         Me.Controls.Add(Me.txtPhone)
         Me.Controls.Add(Me.txtDOB)
         Me.Controls.Add(Me.chkPaid)
@@ -247,4 +259,5 @@ Partial Class Form1
     Friend WithEvents chkPaid As CheckBox
     Friend WithEvents txtDOB As DateTimePicker
     Friend WithEvents txtPhone As TextBox
+    Friend WithEvents btnFindStud As Button
 End Class
